@@ -26,11 +26,11 @@ CREATE TABLE IF NOT EXISTS boo.test
 DESCRIBE boo.test;
 
 /* ----- Daten ------- */
-INSERT INTO boo.test(name,age) VALUES ("Grizabella",29);
-INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
-INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
-INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
+-- INSERT INTO boo.test(name,age) VALUES ("Grizabella",29);
+-- INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
+-- INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
+-- INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
 
 
-/* ---- Inhalte der Tabelle anzeigen ---- */
-SELECT * FROM boo.test;
+-- /* ---- Inhalte der Tabelle anzeigen ---- */
+-- SELECT * FROM boo.test;
