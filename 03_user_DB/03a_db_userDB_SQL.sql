@@ -15,14 +15,6 @@ CREATE TABLE IF NOT EXISTS boo.users
 DESCRIBE boo.users;
 
 /* Daten */
-INSERT INTO boo.users (userName, familyName, firstName) 
-VALUES ('johndoe123', 'Doe', 'John');
-
-INSERT INTO boo.users (userName, familyName, firstName) 
-VALUES ('emilybrown22', 'Brown', 'Emily');
-
-INSERT INTO boo.users (userName, familyName, firstName) 
-VALUES ('michaelsmith7', 'Smith', 'Michael');
 
 
 /* Inhalte : Ergebnistabelle */

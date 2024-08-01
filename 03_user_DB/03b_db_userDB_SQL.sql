@@ -17,14 +17,26 @@ DESCRIBE boo.users;
 
 /* Daten */
 -- Nachteil: PWDs liegen offen! 
+-- Besser: PWDs verschlüsselt mit SHA1! 
 INSERT INTO boo.users (userName, familyName, firstName, userPwd) 
-VALUES ('johndoe123', 'Doe', 'John', '1234');
+VALUES ('johndoe123', 'Doe', 'John', SHA1('1234'));
 
 INSERT INTO boo.users (userName, familyName, firstName, userPwd) 
-VALUES ('emilybrown22', 'Brown', 'Emily', '7#Dx');
+VALUES ('emilybrown22', 'Brown', 'Emily', SHA1('7#Dx'));
 
 INSERT INTO boo.users (userName, familyName, firstName, userPwd) 
-VALUES ('michaelsmith7', 'Smith', 'Michael','user1234');
+VALUES ('michaelsmith7', 'Smith', 'Michael',SHA1('user1234'));
+
+/* Spalten hinzufügen an bestehender Tabelle */
+ALTER TABLE boo.users ADD userPLZ VARCHAR(5) NOT NULL DEFAULT "00000";
+
+
+/* Inhalte : Ergebnistabelle */
+SELECT * FROM boo.users;
+
+/*Update */
+UPDATE boo.users SET userPLZ = "67063" WHERE id= 1;
+UPDATE boo.users SET userPLZ = "88888" WHERE familyName= "Smith";
 
 /* Inhalte : Ergebnistabelle */
 SELECT * FROM boo.users;
