@@ -15,7 +15,8 @@ CREATE TABLE IF NOT EXISTS boo.cats
 DESCRIBE boo.cats;
 
 -- CSV-Datei parsen
-LOAD DATA LOCAL INFILE "04_SQL_DataImport/data/cats_export.csv"
+-- SET GLOBAL local_infile=1;
+LOAD DATA LOCAL INFILE "C:/Users/SKAN117/Documents/Workspaces_DB/xampp/rezz/cats_export.csv"
 INTO TABLE boo.cats
 FIELDS TERMINATED BY ";" 
 LINES TERMINATED BY "\n" 
